@@ -22,7 +22,7 @@ pipeline
         stage('Pull') {
             steps {
                 // git branch: 'main', url: 'https://github.com/Gaurav9540/mvn-project.git'
-                git branch: 'main', url: 'https://github.com/vaibhavlahare/StudentData.git'
+                git branch: 'main', url: 'https://github.com/SurajBele/studentdata.git'
                 echo "pulling successfully!"
             }
         }
