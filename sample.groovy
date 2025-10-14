@@ -1,4 +1,5 @@
-pipeline {
+pipeline 
+{
  
     // For only single node
     agent any
@@ -113,11 +114,11 @@ pipeline {
         stage('Deploy with Docker') {
             steps {
                 sh """
-                  d
                 echo "Container deployed successfully and running on port 8083!"
-            }ocker rm -f ${APP_NAME} || true
-                  docker run -d --name ${APP_NAME} -p 8083:8080 ${IMAGE}:latest
+                docker rm -f ${APP_NAME} || true
+                docker run -d --name ${APP_NAME} -p 8083:8080 ${IMAGE}:latest
                 """
+            }
         }
  
         // Cleanup Stage
