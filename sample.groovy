@@ -48,7 +48,7 @@ pipeline
         // QualityGate Check Test
         stage('QualityGate') {
             steps {
-                // waitForQualityGate abortPipeline: false, credentialsId: 'sonar-secret-key'
+                waitForQualityGate abortPipeline: false, credentialsId: 'sonar-secret-key'
                 echo "qulity gate check successfully!"
             }
         }
